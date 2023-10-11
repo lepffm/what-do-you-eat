@@ -15,11 +15,13 @@ export default defineConfig({
   },
   base: '/what-do-you-eat',
   server: {
+/*
     proxy: {
       '^/v1/what-do-you-eat': {
         target: 'https://api.counterapi.dev/',
         changeOrigin: true
       },
     }
+*/
   }
 })

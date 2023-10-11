@@ -16,7 +16,7 @@ onMounted(() => {
 async function readCount(){
   try {
     for (const item of items) {
-      const response = await fetch(`/v1/what-do-you-eat/${item.id}/`
+      const response = await fetch(`https://api.counterapi.dev/v1/what-do-you-eat/${item.id}/`
           /*,{mode: 'no-cors'} */);
       const resp = await response.json();8
       item.count = resp.count;
@@ -27,7 +27,7 @@ async function readCount(){
 }
 async function upVote(id){
   try {
-    const response = await fetch(`/v1/what-do-you-eat/${id}/up`);
+    const response = await fetch(`https://api.counterapi.dev/v1/what-do-you-eat/${id}/up`);
     const resp = await response.json();
     items.find((item)=>item.id === id).count = resp.count;
   } catch (error) {
