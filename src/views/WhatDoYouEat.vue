@@ -29,7 +29,7 @@ async function upVote(id){
   try {
     const response = await fetch(`https://api.counterapi.dev/v1/what-do-you-eat/${id}/up`);
     const resp = await response.json();
-    items.find((item)=>item.id === id).count = resp.count;
+    items.find((item)=>item.name === id).count = resp.count;
   } catch (error) {
     console.error(error);
   }
