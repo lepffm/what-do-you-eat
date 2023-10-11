@@ -27,3 +27,14 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### manage counter
+#### create or add 
+curl https://api.counterapi.dev/v1/:namespace/:name/up
+#### show 
+curl https://api.counterapi.dev/v1/:namespace/:name
+#### down 
+curl https://api.counterapi.dev/v1/:namespace/:name/down
+#### reference 
+https://counterapi.dev/api/endpoints.html
+
